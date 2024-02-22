@@ -27,5 +27,8 @@ for i in line_list:
 
 
 print(tb_list)
+for tb in tb_list:
+    tb=tb.upper()
+    print("exec dbms_stats.gather_table_stats(owname)=>'"+"owner"+",tablename=>'"+tb+"',method_opt=>'for all indexed ccolumns',degree=>2,cascade=>true,no_invalidate=>false);")
 # print(Parser(sql).query_type)
 # print(Parser(sql).tables)
